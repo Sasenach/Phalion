@@ -1,0 +1,33 @@
+﻿<Page x:Class="Phalion.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Phalion"
+      mc:Ignorable="d" 
+      d:DesignHeight="50" d:DesignWidth="1000"
+      Title="Menu" Background="#FFCBCBCB">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Shifts" Content="Смена" Grid.Column="0" Margin="5" Cursor="Hand" Click="Shifts_Click"/>
+        <Button x:Name="Transport" Content="Транспорт" Grid.Column="1" Margin="5" Click="Transport_Click"/>
+        <Button x:Name="Trip" Content="Поездки" Grid.Column="2" Margin="5" Click="Trip_Click"/>
+        <Button x:Name="Load_capacity" Content="Грузоподъемность" Grid.Column="3" Margin="5" Click="Load_capacity_Click"/>
+        <Button x:Name="Employee" Content="Сотрудники" Grid.Column="4" Margin="5" Cursor="Hand" Click="Employee_Click"/>
+        <Button x:Name="Post" Content="Должность" Grid.Column="5" Margin="5" Click="Post_Click"/>
+        <Button x:Name="Brigade" Content="Бригада" Grid.Column="6" Margin="5" Click="Brigade_Click"/>
+        <Button x:Name="Facility" Content="Объект" Grid.Column="7" Margin="5" Click="Facility_Click"/>
+        <Button x:Name="Repair" Content="Ремонт" Grid.Column="8" Margin="5" Click="Repair_Click" Cursor="Hand"/>
+    </Grid>
+</Page>

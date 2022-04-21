@@ -1,0 +1,52 @@
+﻿<Window x:Class="Phalion.Autorization"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Phalion"
+        mc:Ignorable="d"
+        Title="Autorization" MinHeight="750" MinWidth="1000" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.ColumnSpan="3" FontSize="56" Content="Авторизация" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Grid Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Авторизируйтесь с помощью электронной почты" FontSize="18" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+            <TextBox x:Name="txtEmail" material:HintAssist.Hint="E-mail" VerticalAlignment="Center" FontSize="18" Grid.Row="1"/>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Name="lblHint" Content="Введите ниже код доступа, который пришел вам на почту" FontSize="18" VerticalAlignment="Bottom" HorizontalAlignment="Left" Visibility="Collapsed"/>
+            <TextBox x:Name="txtVerCode" material:HintAssist.Hint="123456" VerticalAlignment="Center" FontSize="18" Grid.Row="1" TextChanged="txtVerCode_TextChanged" Visibility="Collapsed"/>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Button x:Name="btnSendCode" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Bottom"
+            Content="Получить код доступа на почту" material:ButtonAssist.CornerRadius="10" FontSize="18" Width="350" Height="46" Click="btnSendCode_Click"/>
+
+    </Grid>
+</Window>
