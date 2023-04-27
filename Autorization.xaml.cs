@@ -69,9 +69,9 @@ namespace Phalion
                         MailMessage message = new MailMessage(from, to);
                         message.Subject = "Ваш код для входа в систему";
                         message.Body = Convert.ToString(rnd);
-                        SmtpClient smtp = new SmtpClient("smtp.mail.ru", 2525);
+                        SmtpClient smtp = new SmtpClient("smtp.mail.ru", 587);
                         smtp.UseDefaultCredentials = false;
-                        smtp.Credentials = new NetworkCredential("petrash123321@mail.ru", "Qwerty20!5");
+                        smtp.Credentials = new NetworkCredential("petrash123321@mail.ru", "79AMHvwMh6R8sRacSEDf");
                         smtp.EnableSsl = true;
                         await Task.Run(() => smtp.Send(message));
                         email = txtEmail.Text;
